@@ -286,7 +286,7 @@ ggn = calculate_exact_ggn(cross_entropy_loss, _model_fn, params, x_train, y_trai
 # low rank approximation
 
 import matfree
-from matfree import decomp, lanczos, montecarlo
+from matfree import decomp
 from matfree.backend import func, linalg, np
 from typing import Callable, Literal, Optional
 
@@ -298,7 +298,7 @@ def lanczos_tridiag(
     ncols = v0.shape[0]
     if order >= ncols or order < 1:
         raise ValueError
-    algorithm = matfree.lanczos.tridiagonal_full_reortho(order)
+    algorithm = decomp.tridiag_full_reortho(order)
     u0 = v0/jnp.linalg.norm(v0)
     _, tridiag = decomp.decompose_fori_loop(u0, Av, algorithm=algorithm)
     (diag, off_diag) = tridiag
