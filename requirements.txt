@@ -1,0 +1,10 @@
+tree-math
+matfree
+jaxlib
+jax
+matplotlib
+optax
+flax
+torch
+torchvision
+opencv-python
