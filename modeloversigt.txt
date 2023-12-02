@@ -1,0 +1,7 @@
+v0: baseline modtaget af vejleder med MNIST
+v1: baseline modtaget af vejleder med CIFAR10
+v2: endelig modelarkitektur med CIFAR10
+v3: eigenvalues på MNIST rå modtaget af vejleder
+______
+v4: eigenvalues på CIFAR10 rå modtaget af vejleder
+v5: eigenvalues på CIFAR10 med endelig modelarkitektur
